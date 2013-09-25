@@ -1,4 +1,4 @@
-class Neuron( object ):
+class IAFNeuron( object ):
 
   def __init__( self ):
     pass
