@@ -38,3 +38,5 @@ pygtk/
 nest_tutorials/
 .*.swp
 .*.un~
+*.csv
+*.pdf
