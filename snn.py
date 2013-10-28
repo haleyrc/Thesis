@@ -181,7 +181,8 @@ class IAFNeuron( NodeType ):
     '''
 
     for target in self.targets:
-      target.spike( ( self.time + self.propagation_delay, self.node_id ) )
+      target.spike( ( self.time + self.propagation_delay, self.node_id, 
+                      self.weights[ target.node_id ] ) )
 
     # Simulate spike-rate adaptation by increasing capacitance after a spike
     # TODO: make the adaptation rate a model parameter
@@ -198,8 +199,8 @@ class IAFNeuron( NodeType ):
        for continuity with other node types.
     '''
 
-    time, _ = spike_data
-    self.input( ( time, 1. ) )
+    time, _, voltage = spike_data
+    self.input( ( time, voltage ) )
 
   def tick( self ):
     '''Advances the internal time of the neuron and catalyzes the necessary 
@@ -453,7 +454,7 @@ class SpikeDetector( NodeType ):
        spike data.
     '''
 
-    time, node_id = spike_data
+    time, node_id, _ = spike_data
     self.spike_stream[time].append( node_id )
 
   def tick( self ):
