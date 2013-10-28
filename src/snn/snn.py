@@ -41,7 +41,9 @@ class IAFNeuron( NodeType ):
 
   next_id = 0
 
-  def __init__( self, threshold_voltage ):
+  def __init__( self, threshold_voltage, to_file = False, to_screen = False ):
+    self.to_file = to_file
+    self.to_screen = to_screen
     self.voltage_trace = [[],[]]
     self.time = 0
     self.targets = []

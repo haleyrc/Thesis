@@ -1,6 +1,6 @@
 from datetime import datetime as dt
 from pylab import *
-from snn import *
+from snn.snn import *
 
 if __name__ == "__main__":
 
