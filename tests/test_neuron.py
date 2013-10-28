@@ -1,4 +1,4 @@
-from snn import *
+from snn.snn import *
 import re
 
 # Pointless test to check nose functionality
