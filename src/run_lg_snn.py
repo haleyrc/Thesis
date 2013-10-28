@@ -1,7 +1,7 @@
 from datetime import datetime as dt
 from random import randint
 from pylab import *
-from snn import *
+from snn.snn import *
 
 if __name__ == "__main__":
 
