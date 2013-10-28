@@ -4,7 +4,8 @@ Work done toward the completion of my Master's thesis at the Rochester Institute
 
 ## Release Log:
 
-  1.0:
+  ### 1.0:
+
     A spiking neural network can be created which consists of basic
     integrate-and-fire neurons. These neurons show both absolute and relative
     refractory periods as well as basic spike-rate adaptation.
@@ -17,7 +18,7 @@ Work done toward the completion of my Master's thesis at the Rochester Institute
 
     A test file is provided which ensures proper behavior as features are added.
 
-    ### TODO:
+    #### TODO:
       * The logging system is very inefficient and needs to be replaced. This
         will happen in a future release which integrates with a database for
         central logging of node events.
