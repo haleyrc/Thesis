@@ -1,0 +1,14 @@
+#!/bin/zsh
+set -e
+
+python head_runner.py &
+python node_runner.py INPUT  10 8001 &>> out_log &
+python node_runner.py INPUT  10 8002 &>> out_log &
+python node_runner.py INPUT  10 8003 &>> out_log &
+python node_runner.py INPUT  10 8004 &>> out_log &
+python node_runner.py INPUT  10 8005 &>> out_log &
+python node_runner.py INPUT  10 8006 &>> out_log &
+python node_runner.py INPUT  10 8007 &>> out_log &
+python node_runner.py INPUT  10 8008 &>> out_log &
+python node_runner.py INPUT  10 8009 &>> out_log &
+python node_runner.py OUTPUT 1  8010 &>> out_log &

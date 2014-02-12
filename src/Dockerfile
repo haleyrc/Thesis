@@ -1,0 +1,18 @@
+# Pip & NumPy
+#
+# VERSION       1.0
+
+FROM ubuntu
+MAINTAINER Ryan C. Haley, haley.rc@gmail.com
+
+WORKDIR /dropbox/Dropbox/hacking/thesis/src
+
+RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
+RUN apt-get update
+
+RUN apt-get install -y python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose python-twisted
+# RUN apt-get install -y python-pip
+# RUN pip install numpy
+# RUN pip install twisted
+
+ENTRYPOINT ["python", "head_runner.py"]
