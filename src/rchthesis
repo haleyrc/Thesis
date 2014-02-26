@@ -1,5 +1,3 @@
-# Pip & NumPy
-#
 # VERSION       1.0
 
 FROM ubuntu
@@ -11,9 +9,3 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt
 RUN apt-get update
 
 RUN apt-get install -y python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose python-twisted git
-RUN git pull git@github.com:sarosamurai/Thesis.git
-# RUN apt-get install -y python-pip
-# RUN pip install numpy
-# RUN pip install twisted
-
-ENTRYPOINT ["python", "head_runner.py"]

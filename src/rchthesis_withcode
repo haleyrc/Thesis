@@ -1,0 +1,8 @@
+# VERSION       1.0
+
+FROM rchthesis
+MAINTAINER Ryan C. Haley, haley.rc@gmail.com
+
+WORKDIR /dropbox/Dropbox/hacking/thesis/src
+
+RUN git clone -b twisted-sock https://github.com/sarosamurai/Thesis.git

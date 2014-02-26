@@ -1,0 +1,8 @@
+# VERSION       1.0
+
+FROM rchthesis/withcode
+MAINTAINER Ryan C. Haley, haley.rc@gmail.com
+
+WORKDIR /dropbox/Dropbox/hacking/thesis/src
+
+ENTRYPOINT ["python", "head_runner.py"]
